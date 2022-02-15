@@ -109,35 +109,41 @@ h2 {
 @media (min-width: 1440px) {
   .card-component {
     margin: 120px 150px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-flow: row wrap;
     text-align: left;
+    gap: 0px;
   }
-  .image-header {
-    order: 2;
+  .image-header, main {
+    flex: 1 1 0;
   }
   main {
     order: 1;
   }
+  .image-header {
+    order: 2;
+  }
   .image-header > img {
+    width: 100%;
     border-radius: 0px 10px 10px 0px;
   }
   .image-overlay {
     border-radius: 0px 10px 10px 0px;
   }
   main {
-    padding: 80px 60px;
+    padding: 0;
   }
   .info-section {
-    width: 80%;
     display: flex;
     flex-flow: column wrap;
     gap: 10px;
+    margin: 80px 80px 0px 80px;
   }
   .stats-section {
     flex-grow: 1;
     align-content: flex-end;
     flex-flow: row wrap;
     gap: 50px;
+    margin: 0px 80px 80px 80px;
   }
 }
