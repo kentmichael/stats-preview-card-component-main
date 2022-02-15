@@ -1,0 +1,143 @@
+/* variables */
+:root {
+  --very-dark-blue-main-bg: hsl(233, 47%, 7%);
+  --dark-saturated-blue-card-bg: hsl(244, 38%, 16%);
+  --soft-violet: hsl(277, 64%, 61%);
+
+  --slight-tpw-main-p: hsla(0, 0%, 100%, 0.75);
+  --slight-tpw-stat-h: hsla(0, 0%, 100%, 0.6);
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 0%);
+
+  --font-size-body: 15px;
+
+  --font-family-inter: 'Inter', sans-serif;
+  --font-fam-lexe: 'Lexend Deca', sans-serif;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: var(--font-size-body);
+  background-color: var(--very-dark-blue-main-bg);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+.card-component {
+  margin: 60px 20px;
+  background-color: var(--dark-saturated-blue-card-bg);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.image-header > img {
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+h1, h2 {
+  color: var(--white);
+  font-family: var(--font-family-inter);
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h1 > span {
+  color: var(--soft-violet);
+}
+
+main {
+  padding: 30px 20px;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 50px;
+}
+
+p {
+  color: var(--slight-tpw-main-p);
+  font-family: var(--font-fam-lexe);
+}
+
+h2 {
+  line-height: 0;
+}
+
+.image-header {
+  font-size: 0;
+  position: relative;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--soft-violet);
+  opacity: .5;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.stats-section {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 20px;
+}
+
+@media (min-width: 1440px) {
+  .card-component {
+    margin: 120px 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+  .image-header {
+    order: 2;
+  }
+  main {
+    order: 1;
+  }
+  .image-header > img {
+    border-radius: 0px 10px 10px 0px;
+  }
+  .image-overlay {
+    border-radius: 0px 10px 10px 0px;
+  }
+  main {
+    padding: 80px 60px;
+  }
+  .info-section {
+    width: 80%;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 10px;
+  }
+  .stats-section {
+    flex-grow: 1;
+    align-content: flex-end;
+    flex-flow: row wrap;
+    gap: 50px;
+  }
+}
