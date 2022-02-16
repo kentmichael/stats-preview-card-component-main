@@ -10,7 +10,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: https://kentmichael.github.io/stats-preview-card-component-main/
+- Live Site URL: 
 
 ## My process
 
